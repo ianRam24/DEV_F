@@ -1,0 +1,16 @@
+const body = document.querySelector('body');
+const paragraph = document.createElement('p');
+paragraph.textContent = 'Created from JS 😎';
+body.append(paragraph);
+const btn = document.createElement('button');
+btn.className = 'btn';
+btn.textContent = 'Iniciar Juego';
+body.append(btn);
+const link = document.createElement('a');
+link.textContent = 'go to google';
+link.href = 'https://www.google.com.mx/?hl=es-419';
+link.className = 'link';
+body.append(link);
+const img = document.createElement('img');
+img.src = 'https://robohash.org/a';
+body.append(img);

@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: rgba(0, 0, 0, 0.897);
+}
+img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
+}
+h1,
+h2 {
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+}
+h2 i {
+  transition: 0.5s color ease;
+}
+h2 i:hover {
+  color: rgba(0, 0, 0, 0.377);
+}
+i {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+}
+.nav {
+  background-color: #000;
+  padding: 10px;
+}
+.nav-logo {
+  font-size: 30px;
+  color: #fff;
+  padding: 0;
+  text-decoration: none;
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: lightslategray;
+  transition: 0.5s color ease;
+  padding: 5px;
+}
+.nav-link a:hover {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rows {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.item {
+  position: relative;
+  width: 200px;
+  height: 280px;
+  border: 1px solid rgb(31, 235, 75);
+  border-radius: 10px;
+}
+.info {
+  position: absolute;
+  background-color: rgba(33, 36, 33, 0.8);
+  top: 0px;
+  left: 0;
+  display: block;
+  opacity: 0;
+  transition: 0.5s all ease-in;
+  height: 100%;
+  color: #fff;
+  padding: 10px;
+  line-height: 1.5;
+  font-size: 15px;
+  border-radius: 10px;
+}
+.item:hover .info {
+  transition: 0.5s all ease-out;
+  opacity: 1;
+}
+.info span {
+  display: block;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+}
+.bxs-chevrons-up {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+}
+.footer {
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}

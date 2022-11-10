@@ -1,0 +1,123 @@
+const pokemons = [
+  'bulbasaur',
+  'ivysaur',
+  'venusaur',
+  'charmander',
+  'charmeleon',
+  'charizard',
+  'squirtle',
+  'wartortle',
+  'blastoise',
+  'caterpie',
+  'metapod',
+  'butterfree',
+  'weedle',
+  'kakuna',
+  'beedrill',
+  'pidgey',
+  'pidgeotto',
+  'pidgeot',
+  'rattata',
+  'raticate',
+  'spearow',
+  'fearow',
+  'ekans',
+  'arbok',
+  'pikachu',
+  'raichu',
+  'sandshrew',
+  'sandslash',
+  'nidoran-f',
+  'nidorina',
+  'nidoqueen',
+  'nidoran-m',
+  'nidorino',
+  'nidoking',
+  'clefairy',
+  'clefable',
+  'vulpix',
+  'ninetales',
+  'jigglypuff',
+  'wigglytuff',
+  'zubat',
+  'golbat',
+  'oddish',
+  'gloom',
+  'vileplume',
+  'paras',
+  'parasect',
+  'venonat',
+  'venomoth',
+  'diglett',
+  'dugtrio',
+  'meowth',
+  'persian',
+  'psyduck',
+  'golduck',
+  'mankey',
+  'primeape',
+  'growlithe',
+  'arcanine',
+  'poliwag',
+  'poliwhirl',
+  'poliwrath',
+  'abra',
+  'kadabra',
+  'alakazam',
+  'machop',
+  'machoke',
+  'machamp',
+  'bellsprout',
+  'weepinbell',
+  'victreebel',
+  'tentacool',
+  'tentacruel',
+  'geodude',
+  'graveler',
+  'golem',
+  'ponyta',
+  'rapidash',
+  'slowpoke',
+  'slowbro',
+  'magnemite',
+  'magneton',
+  'farfetchd',
+  'doduo',
+  'dodrio',
+  'seel',
+  'dewgong',
+  'grimer',
+  'muk',
+  'shellder',
+  'cloyster',
+  'gastly',
+  'haunter',
+  'gengar',
+  'onix',
+  'drowzee',
+  'hypno',
+  'krabby',
+  'kingler',
+  'voltorb',
+];
+let numero = parseInt(prompt('Ingrese un numero por favor: '));
+
+for (let index = 1; index <= numero; index++) {
+  if (numero > 0 && numero % 5 == 0) {
+    // console.log(pokemons[index]);
+    const pokemonIndex = `<b>${pokemons.indexOf(pokemons[index])}</b>`;
+    const pokemonName = pokemons[index];
+    const firstLetter = pokemonName.charAt(0);
+    const firstLetterToUpperCase = firstLetter.toUpperCase();
+    const restOfWord = pokemonName.slice(1);
+    document.write(
+      `${pokemonIndex} ${firstLetterToUpperCase}${restOfWord}<br>`
+    );
+  } else {
+    document.write(`El número  ${numero}  no es múltiplo de 5`);
+    break;
+  }
+}
+setTimeout(() => {
+  location.reload();
+}, 5000);

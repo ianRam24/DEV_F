@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  font-family: 'Edu TAS Beginner', cursive;
+  color: #ffff;
+  padding: 20px 0;
+  text-align: center;
+}
+a {
+  color: #ffff;
+  list-style: none;
+  text-decoration: none;
+}
+a:hover {
+  background-color: rebeccapurple;
+}

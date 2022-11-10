@@ -1,0 +1,116 @@
+:root {
+  --bg-body: hsl(199, 48%, 16%);
+  --white: hsl(0, 0%, 100%);
+  --bg-form: hsl(198, 58%, 60%, 0.2);
+  --bg-input: hsl(199, 48%, 16%, 0.4);
+  --input-border: rgb(39, 118, 182);
+  --error: hsl(4, 74%, 53%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-body);
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+.form-container {
+  background-color: var(--bg-form);
+  padding: 2.5rem 3rem;
+  width: 90%;
+  max-width: 38rem;
+  border-radius: 20px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.form-title {
+  color: var(--white);
+  text-align: center;
+  font-weight: normal;
+}
+.form-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.form-input:focus {
+  box-shadow: 0, 0, 0, 1px var(--bg-form);
+}
+.form-input label {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+.form-input input {
+  caret-color: var(--bg-form);
+  color: var(--white);
+  background-color: var(--bg-input);
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+.form-input input:focus {
+  outline: 1px solid var(--input-border);
+}
+.form-input span {
+  color: var(--white);
+}
+
+.button {
+  padding: 1rem 2rem;
+  background-color: transparent;
+  border: none;
+  outline: 1px solid var(--white);
+  color: var(--white);
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease-in;
+}
+.button:hover {
+  background-color: var(--white);
+  color: var(--bg-body);
+}
+.validation {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+/***************          USER INFO         ************/
+.user-info {
+  width: 30rem;
+  height: 40rem;
+  background-color: transparent;
+  border: 1.5px solid var(--white);
+  text-align: center;
+  color: var(--white);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2rem;
+}
+
+.user-balance span {
+  font-style: italic;
+}
+.user-info p {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
