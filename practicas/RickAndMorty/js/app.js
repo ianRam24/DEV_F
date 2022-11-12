@@ -1,3 +1,4 @@
+// Rick And Morty
 const container = document.querySelector('#app');
 const buttonsContainer = document.querySelector('.buttons');
 const buttonPrev = document.getElementById('prev');
@@ -14,6 +15,7 @@ async function fetchCharacters(endpoint) {
     const data = await response.json();
     characters = data.results;
     renderCharacters(characters);
+    observeImages();
     loader.style.display = 'none';
     buttonsContainer.style.display = 'flex';
   } catch (error) {
@@ -25,7 +27,7 @@ function renderCharacters(characters) {
   characters?.map((results) => {
     container.innerHTML += `
                     <div class="card">
-                  <figure><img loading="lazy" src="${results.image}" alt=${results.name}></figure>
+                  <figure><img class="card-image" loading="lazy" src="${results.image}" alt=${results.name}></figure>
                     <div class="card-text">
                       <p>Name: <span>${results.name}</span></p>
                       <p>Location: <span>${results.location.name}</span></p>
@@ -66,4 +68,24 @@ inputSearch.addEventListener('keyup', (e) => {
   renderCharacters();
 });
 
-// Intesection Observer
+// Intersection Observer
+function observeImages() {
+  const images = [...document.querySelectorAll('.card')];
+
+  console.log(images);
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show-anim');
+          console.log('intersecting');
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  images.forEach((image) => {
+    observer.observe(image);
+  });
+}

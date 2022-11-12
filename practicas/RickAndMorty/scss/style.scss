@@ -64,14 +64,17 @@ form {
   -webkit-box-shadow: 0px 10px 13px -7px #000000,
     1px 5px 10px 14px rgba(0, 0, 0, 0);
   box-shadow: 0px 10px 13px -7px #000000, 1px 5px 10px 14px rgb(126, 207, 201);
-  // transform: translateX(50%);
-  // opacity: 0;
-  // transition: tranform 0.3s ease;
-  // overflow-x: hidden;
+  opacity: 0;
+  transform: translateY(-150px);
+  transition: 0.5s all ease-in;
 
   span {
     font-weight: 600;
   }
+}
+.show-anim {
+  transform: translateY(0);
+  opacity: 1;
 }
 .buttons {
   margin-top: 50px;
@@ -80,7 +83,7 @@ form {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  button {
+  a {
     font-size: 1.5rem;
     background-color: transparent;
     border: 2px solid #1a1a1a;

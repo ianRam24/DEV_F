@@ -1,2 +1,174 @@
-html{scroll-behavior:smooth}body{background-color:#101010;box-sizing:border-box;font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;height:120vh;margin:0;padding:20px}h1{color:#7ecfc9;color:#fff;text-align:center;text-shadow:0 0 7px #fff,0 0 10px #fff,0 0 21px #fff,0 0 42px #0fa,0 0 82px #0fa,0 0 92px #0fa,0 0 102px #0fa,0 0 151px #0fa}img{height:100%;max-height:250px;-o-object-fit:cover;object-fit:cover;width:100%}p{color:#7ecfc9;padding:5px;text-align:center}form{align-items:center;display:flex;flex-direction:column;justify-content:center}.search{background-color:#000;box-shadow:0 10px 13px -7px #000,1px 5px 10px 4px #7ecfc9;color:#fff;font-size:1.5rem;padding:10px;text-align:center}#app{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));margin-top:50px;place-items:center}.card{border:2px solid #fff;border-radius:15px;box-shadow:0 10px 13px -7px #000,1px 5px 10px 14px #7ecfc9;color:#fff;font-size:1.2rem;font-weight:400;height:500px;padding:0;text-align:center;width:300px}.card span{font-weight:600}.buttons{align-items:center;display:none;gap:20px;justify-content:center;margin-top:50px;padding:10px}.buttons button{background-color:transparent;border:2px solid #1a1a1a;border-radius:15px;box-sizing:border-box;color:#3b3b3b;cursor:pointer;display:inline-block;font-size:1.5rem;font-size:16px;font-weight:600;line-height:normal;margin:0;min-height:60px;min-width:0;outline:none;padding:16px 24px;text-align:center;text-decoration:none;touch-action:manipulation;transition:all .3s cubic-bezier(.23,1,.32,1);-moz-user-select:none;user-select:none;-webkit-user-select:none;width:300px;will-change:transform}.buttons button:hover{background-color:#1a1a1a;box-shadow:0 8px 15px rgba(0,0,0,.25);color:#fff;transform:translateY(-2px)}.loader{animation:rotate 1s linear infinite;border-color:#12887f #12887f #fff #fff;border-style:solid;border-width:200px;left:550px;top:300px}.loader,.loader:before{border-radius:50%;position:absolute}.loader:before{background:#fff;content:"";height:50px;left:50%;top:50%;transform:translate(-50%,-40%);width:50px}@keyframes rotate{to{transform:rotate(1turn)}}::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{border-radius:10px;box-shadow:inset 0 0 5px #000}::-webkit-scrollbar-thumb{background:#7ecfc9;border-radius:10px;box-shadow:0 10px 13px -7px #000,1px 5px 10px 14px #7ecfc9}@supports (scrollbar-color:rgb(126,207,201) rgba(0,0,0,0)){*{scrollbar-arrow-color:red;scrollbar-color:#7ecfc9 #07746c}}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #101010;
+  height: 120vh;
+}
+
+h1 {
+  color: rgb(126, 207, 201);
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+}
+
+img {
+  max-height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+p {
+  text-align: center;
+  color: rgb(126, 207, 201);
+  padding: 5px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.search {
+  color: white;
+  background-color: #000000;
+  box-shadow: 0px 10px 13px -7px #000000, 1px 5px 10px 4px rgb(126, 207, 201);
+  text-align: center;
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  place-items: center;
+  margin-top: 50px;
+  gap: 1rem;
+}
+
+.card {
+  text-align: center;
+  height: 500px;
+  width: 300px;
+  border-radius: 15px;
+  border: 2px solid #fff;
+  font-weight: 400;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0;
+  box-shadow: 0px 10px 13px -7px #000000, 1px 5px 10px 14px rgb(126, 207, 201);
+  opacity: 0;
+  transform: translateY(-150px);
+  transition: 0.5s all ease-in;
+}
+.card span {
+  font-weight: 600;
+}
+
+.show-anim {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.buttons {
+  margin-top: 50px;
+  padding: 10px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.buttons a {
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: 2px solid #1a1a1a;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3b3b3b;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 300px;
+  will-change: transform;
+}
+.buttons a:hover {
+  color: #fff;
+  background-color: #1a1a1a;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.loader {
+  border: 200px solid #fff;
+  border-color: rgb(18, 136, 127) rgb(18, 136, 127) #fff #fff;
+  border-radius: 50%;
+  position: absolute;
+  animation: rotate 1s linear infinite;
+  top: 300px;
+  left: 550px;
+}
+.loader:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -40%);
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px black;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(126, 207, 201);
+  box-shadow: 0px 10px 13px -7px #000000, 1px 5px 10px 14px rgb(126, 207, 201);
+  border-radius: 10px;
+}
+
+@supports (scrollbar-color: rgb(126, 207, 201) rgba(0, 0, 0, 0)) {
+  * {
+    scrollbar-color: rgb(126, 207, 201) rgb(7, 116, 108);
+    scrollbar-arrow-color: red;
+  }
+}
 /*# sourceMappingURL=style.css.map */
