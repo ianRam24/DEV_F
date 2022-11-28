@@ -1,4 +1,3 @@
-// Rick And Morty
 const container = document.querySelector('#app');
 const buttonsContainer = document.querySelector('.buttons');
 const buttonPrev = document.getElementById('prev');
