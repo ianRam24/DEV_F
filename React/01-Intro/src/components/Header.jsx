@@ -1,14 +1,14 @@
 import Button from './Button';
 
-const Header = ({ tareas }) => {
-  const handleClick = () => {
-    console.log('click');
-  };
+const Header = ({ title, onAdd, showForm }) => {
   return (
     <header className="header">
-      <h1>{tareas}</h1>
-      <Button text="Agregar" color="green" handleClick={handleClick} />
-      <Button text="Borrar" color="red" handleClick={handleClick} />
+      <h1>{title}</h1>
+      <Button
+        text={showForm ? 'Hide' : 'Add'}
+        color="lightseagreen"
+        onAdd={onAdd}
+      />
     </header>
   );
 };
