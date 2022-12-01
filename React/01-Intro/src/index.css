@@ -74,7 +74,15 @@ body {
 .add-form {
   margin-bottom: 40px;
 }
-
+.message {
+  font-size: 2.5rem;
+  color: rebeccapurple;
+  font-weight: bold;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .form-control {
   margin: 20px 0;
 }

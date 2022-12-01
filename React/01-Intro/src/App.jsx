@@ -33,17 +33,7 @@ function App() {
       {todos.length > 0 ? (
         <TodoList todos={todos} deleteTodo={deleteTodo} onToggle={markTodo} />
       ) : (
-        <p
-          style={{
-            fontSize: '2.5rem',
-            color: 'rebeccapurple',
-            display: 'grid',
-            placeContent: 'center',
-            fontStyle: 'italic',
-          }}
-        >
-          You dont have tasks to do
-        </p>
+        <p className="message">You dont have tasks to do</p>
       )}
     </div>
   );
