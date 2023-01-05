@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
-export default function useFetch() {
-  const [data, setData] = useState([]);
+import { useState, useEffect } from "react";
+export default function useFetch(url) {
+  const [data, setData] = useState([] || {});
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    fetchData('https://dummyjson.com/users');
+    fetchData(url);
   }, []);
-  const fetchData = async (url) => {
+  const fetchData = async url => {
     try {
       const req = await fetch(url);
       const res = await req.json();
@@ -19,5 +19,6 @@ export default function useFetch() {
   return {
     data,
     isLoading,
+    setData,
   };
 }
