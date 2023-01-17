@@ -1,0 +1,23 @@
+.searchInput {
+  background-color: #fff;
+}
+.searchBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.3rem;
+  padding: 10px;
+}
+.searchBar input,
+.searchBtn {
+  padding: 5px;
+  outline: none;
+  border: none;
+}
+.searchBtn {
+  background-color: darkgreen;
+  margin-left: 10px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
